@@ -35,7 +35,7 @@ cask "aiss" do
 
   postflight_steps do
     on_macos do
-      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/aiss"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/aiss"]
     end
   end
 
